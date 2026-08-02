@@ -1,0 +1,32 @@
+# CLion / IntelliJ IDEA
+.idea/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Compiled executables
+nsga_ii
+main
+*.o
+*.out
+*.dSYM/
+
+# Python virtual environment and caches
+.venv/
+__pycache__/
+*.py[cod]
+
+# macOS
+.DS_Store
+
+# Generated experiment data
+populationZDT*.txt
+frontZDT*.txt
+
+# Generated plots
+ZDT*plot.png
+
+# Optional logs
+*.log
