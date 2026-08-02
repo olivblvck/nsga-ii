@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import os
 from glob import glob
+BUILD_DIR = "cmake-build-debug"
 
 # generacje i kolory
 target_generations = [20, 50, 100, 500]
@@ -74,14 +75,18 @@ def plot_experiment_for_function_and_dimension(function, dimension, population_f
     plt.minorticks_on()
 
     # eksport wykresów do .png
-    output_filename = f"ZDT{function}_{dimension}D_plot.png"
-    plt.savefig(output_filename)
+    output_filename = os.path.join(
+        BUILD_DIR,
+        f"ZDT{function}_{dimension}D_plot.png"
+    )
+
+    plt.savefig(output_filename, dpi=150, bbox_inches="tight")
     print(f"Plot saved as: {output_filename}")
-    plt.show()
+    plt.close()
 
 
-population_files_all = sorted(glob("population_ZDT*_*.txt"))  # dane populacji
-pareto_files_all = sorted(glob("front_ZDT*_*.txt"))  # dane frontów
+population_files_all = sorted(glob(os.path.join(BUILD_DIR, "population_ZDT*_*.txt")))
+pareto_files_all = sorted(glob(os.path.join(BUILD_DIR, "front_ZDT*_*.txt")))
 
 # grupoanie plików wg funkcji testowej i wymiarów
 experiments = {}

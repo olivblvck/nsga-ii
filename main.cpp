@@ -450,24 +450,24 @@ void runExperiment(int zdt_function, int dimensions, int population_size, int ma
 
 
 //do uruchomienia programu python do generowania wykresu
-void runPythonScript(const std::string& scriptPath)
+void runPythonScript(const std::string& scriptName)
 {
     std::cout << "Running Python script..." << std::endl;
 
-#ifdef _WIN32
-    std::string command = "py \"" + scriptPath + "\"";
-#else
     const std::string projectDirectory = PROJECT_SOURCE_DIR;
     const std::string pythonPath = projectDirectory + "/.venv/bin/python3";
-    const std::string fullScriptPath = projectDirectory + "/" + scriptPath;
+    const std::string scriptPath = projectDirectory + "/" + scriptName;
 
-    std::string command =
-            "cd \"" + projectDirectory + "\" && "
-            "\"" + pythonPath + "\" "
-            "\"" + fullScriptPath + "\"";
+#ifdef _WIN32
+    const std::string command =
+        "cd /d \"" + projectDirectory + "\" && python \"" + scriptPath + "\"";
+#else
+    const std::string command =
+        "cd \"" + projectDirectory + "\" && \"" +
+        pythonPath + "\" \"" + scriptPath + "\"";
 #endif
 
-    int result = system(command.c_str());
+    const int result = std::system(command.c_str());
 
     if (result != 0) {
         std::cerr << "Error while running the Python script." << std::endl;

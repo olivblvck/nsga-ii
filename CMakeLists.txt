@@ -7,13 +7,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(nsga_ii
-        main.cpp
-        RandomGen.h
-        main.cpp
-        RandomGen.h
-        main.cpp
+main.cpp
+RandomGen.h
 )
 
-set_target_properties(nsga_ii PROPERTIES
-        VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
+target_compile_definitions(nsga_ii PRIVATE
+PROJECT_SOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}"
 )

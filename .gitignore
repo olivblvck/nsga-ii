@@ -30,3 +30,8 @@ ZDT*plot.png
 
 # Optional logs
 *.log
+
+# Zachowaj wykresy używane przez README
+!docs/
+!docs/images/
+!docs/images/*.png
