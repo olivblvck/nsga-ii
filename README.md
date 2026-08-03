@@ -150,9 +150,9 @@ Skrypt `main.py` zapisuje wykresy w katalogu `cmake-build-debug/`. Poniżej znaj
 
 | ZDT1 — 10D | ZDT2 — 30D |
 |---|---|
-| ![Wykres ZDT1 dla 10 wymiarów](docs/images/ZDT1_10D_plot.png) | ![Wykres ZDT2 dla 30 wymiarów](docs/images/ZDT2_30D_plot.png) |
+| ![Wykres ZDT1 dla 50 wymiarów](docs/images/ZDT1_50D_plot.png) | ![Wykres ZDT2 dla 50 wymiarów](docs/images/ZDT2_50D_plot.png) |
 | **ZDT3 — 50D** | **ZDT4 — 10D** |
-| ![Wykres ZDT3 dla 50 wymiarów](docs/images/ZDT3_50D_plot.png) | ![Wykres ZDT4 dla 10 wymiarów](docs/images/ZDT4_10D_plot.png) |
+| ![Wykres ZDT3 dla 50 wymiarów](docs/images/ZDT3_50D_plot.png) | ![Wykres ZDT4 dla 50 wymiarów](docs/images/ZDT4_50D_plot.png) |
 
 ## Implementacja
 
