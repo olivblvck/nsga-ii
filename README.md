@@ -4,7 +4,7 @@ Implementacja algorytmu **NSGA-II** (*Non-dominated Sorting Genetic Algorithm II
 
 Program wykonuje eksperymenty dla funkcji **ZDT1, ZDT2, ZDT3, ZDT4 i ZDT6**. Po zakończeniu obliczeń skrypt Python generuje wykresy przedstawiające populacje oraz fronty Pareto dla kolejnych generacji.
 
-Projekt wykonany w ramach kursu Algorytmy Inspirowane Naturą, UKSW 2024r.  
+Projekt wykonany w ramach kursu Algorytmy Inspirowane Naturą, UKSW 2024r. Autorzy: [olivblvck](https://github.com/olivblvck), [Potceax](https://github.com/Potceax)
 
 
 ## Funkcjonalności
